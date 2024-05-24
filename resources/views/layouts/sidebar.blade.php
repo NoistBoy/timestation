@@ -18,7 +18,7 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-user"></i><span> User <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                                 <ul class="submenu">
                                     <li>
-                                        <a href="https://opaltimecard.com/users" class="waves-effect {{ request()->is("user") || request()->is("/user") ? "mm active" : "" }}"><i class="dripicons-view-apps"></i><span>User List</span></a>
+                                        <a href="{{ url('/users') }}" class="waves-effect {{ request()->is("user") || request()->is("/user") ? "mm active" : "" }}"><i class="dripicons-view-apps"></i><span>User List</span></a>
                                     </li>
 
                                 </ul>
@@ -27,13 +27,13 @@
                                 <a href="javascript:void(0);" class="waves-effect"><i class="ti-id-badge"></i><span> Employees <span class="float-right menu-arrow"><i class="mdi mdi-chevron-right"></i></span> </span></a>
                                 <ul class="submenu">
                                     <li>
-                                        <a href="https://opaltimecard.com/employees" class="waves-effect {{ request()->is("employees") || request()->is("/employees") ? "mm active" : "" }}"><i class="dripicons-view-apps"></i><span>Employees List</span></a>
+                                        <a href="{{ url('/employees') }}" class="waves-effect {{ request()->is("employees") || request()->is("/employees") ? "mm active" : "" }}"><i class="dripicons-view-apps"></i><span>Employees List</span></a>
                                     </li>
 
                                 </ul>
                             </li>
                             <li class="">
-                                <a href="https://opaltimecard.com/department" class="waves-effect {{ request()->is("schedule") || request()->is("schedule/*") ? "mm active" : "" }}">
+                                <a href="{{ url('/department') }}" class="waves-effect {{ request()->is("schedule") || request()->is("schedule/*") ? "mm active" : "" }}">
                                     <i class="fas fa-store-alt"></i> <span> Department </span>
                                 </a>
                             </li>
@@ -53,7 +53,7 @@
                             </li>--}}
                             <li class="menu-title">Report</li>
                             <li class="">
-                                <a href="https://opaltimecard.com/report" class="waves-effect {{ request()->is("sheet-report") || request()->is("sheet-report/*") ? "mm active" : "" }}">
+                                <a href=" {{route('sheet-report')}} " class="waves-effect {{ request()->is("sheet-report") || request()->is("sheet-report/*") ? "mm active" : "" }}">
                                     <i class="dripicons-to-do"></i> <span> Report </span>
                                 </a>
                             </li>
@@ -79,7 +79,7 @@
                                 </a>
                             </li>--}}
                             <li class="">
-                                <a href="https://opaltimecard.com/admin" class="waves-effect {{ request()->is("setting") || request()->is("setting/*") ? "mm active" : "" }}">
+                                <a href="{{ url('/business-setting') }}" class="waves-effect {{ request()->is("setting") || request()->is("setting/*") ? "mm active" : "" }}">
                                     <i class="fas fa-tools"></i> <span> Setting </span>
                                 </a>
                             </li>
